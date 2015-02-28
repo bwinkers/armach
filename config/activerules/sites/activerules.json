@@ -1,0 +1,17 @@
+{
+  "name": "ActiveRules",
+  "description": "ActiveRules JavaScript Application Platform",
+  "properties": {
+    "copyright": {
+      "firstYear": "2015",
+      "holder": "Brian Winkers",
+      "url": "http://www.activerules.com/copyright",
+      "rights": "All Rights Reserved"
+    },
+    "name": {
+      "legal": "ActiveRules&#8482;",
+      "casual": "ActiveRules",
+      "abbrev": "AR"
+    }
+  }
+}
