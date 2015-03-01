@@ -1,0 +1,12 @@
+{
+  "properties": {
+    "term": {
+      "common": "member",
+      "caps": "Member",
+      "plural": "members",
+      "pluralCaps": "Members",
+      "alias": "member",
+      "abbreviated": "member"
+    }
+  }
+}

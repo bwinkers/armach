@@ -1,6 +1,6 @@
 {
-  "name": "ActiveRules",
-  "description": "ActiveRules JavaScript Application Platform",
+  "name": "Parked Domain",
+  "description": "This domain is for sale",
   "properties": {
     "copyright": {
       "firstYear": "2015",
@@ -12,16 +12,6 @@
       "legal": "ActiveRules&#8482;",
       "casual": "ActiveRules",
       "abbrev": "AR"
-    },
-    "localization": {
-      "locales": {
-        "en_US": [
-          "en-activerules",
-          "en-us"
-        ],
-        "es_US": ["en-es"]
-      },
-      "default": "en_US"
     }
   }
 }

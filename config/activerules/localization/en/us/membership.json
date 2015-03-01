@@ -1,0 +1,13 @@
+{
+  "properties": {
+    "term": {
+      "common": "user",
+      "caps": "User",
+      "plural": "users",
+      "pluralCaps": "Users",
+      "alias": "user",
+      "abbreviated": "user"
+    },
+
+  }
+}

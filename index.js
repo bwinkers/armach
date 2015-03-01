@@ -7,7 +7,7 @@ var mach = require('mach')
 // Create an app using the default Mach stack
 var app = mach.stack();
 
-// Use the mach logger in the app
+// Use the mach request logger @todo choose a full logger
 app.use(mach.logger);
 
 // Use ActiveRules
