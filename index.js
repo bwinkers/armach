@@ -56,8 +56,8 @@ app.use(auth, settings);
 // !!!!!! Add your middleware BELOW here. !!!!!!
 //##########################################################################//
 
-// Replace this with your middleware(s)
-// Use any of the ActiveRules ones above as an example.
+        // Replace this with your middleware(s)
+        // Use any of the ActiveRules ones above as an example.
 
 //##########################################################################//
 // ^^^^^ Add your middleware ABOVE here. ^^^^^
@@ -75,7 +75,7 @@ mach.serve(app);
 
 //==========================================================================//
 // Functions.
-// You really shouldn't have to change these for a normal install.
+// You really shouldn't have to change anything below here in a normal install
 //==========================================================================//
 
 /**
@@ -86,8 +86,15 @@ mach.serve(app);
  */
 function loadControllers(app) {
 
+    /**
+     * We always need a route for the root.
+     *
+     * The templates, javascript,css and localization for the homepage are configured per site.
+     * This allows us to use one route for all sites and still provide different content.
+     */
     app.get('/', function (request) {
-        // return 'Hello world!';
+
+        // Send the 
         return nugget.root(request)
     });
 
