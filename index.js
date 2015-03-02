@@ -94,7 +94,7 @@ function loadControllers(app) {
      */
     app.get('/', function (request) {
 
-        // Send the 
+        // Send the
         return nugget.root(request)
     });
 
