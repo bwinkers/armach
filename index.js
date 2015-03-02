@@ -27,6 +27,7 @@ app.use(auth, settings);
 app.use(route, settings);
 
 app.get('/', function (request) {
+    // return 'Hello world!';
     return nugget.root(request)
 });
 
