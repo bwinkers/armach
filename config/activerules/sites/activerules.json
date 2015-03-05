@@ -22,20 +22,6 @@
         "es_US": ["en-es"]
       },
       "default": "en_US"
-    },
-    "services": {
-      "default": {
-        "controller": "page",
-        "method": "home"
-      },
-      "auth": {
-        "controller": "auth",
-        "method": "home"
-      },
-      "auth": {
-        "controller": "auth",
-        "method": "home"
-      }
     }
   }
 }

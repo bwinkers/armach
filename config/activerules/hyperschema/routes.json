@@ -1,0 +1,12 @@
+{
+  "home": {
+    "method": "GET",
+    "path": "/",
+    "classMethod": "nugget.root"
+  },
+  "test": {
+    "method": "GET",
+    "path": "/test",
+    "classMethod": "nugget.test"
+  }
+}

@@ -1,3 +1,4 @@
+"use strict";
 /**
  * This launches the ActiveRules server.
  *
@@ -17,10 +18,16 @@
  */
 var mach = require('mach')
     , settings = require('./config/settings').settings
-    , arconfig = require('arconfig') // ActiveRules config
+    , arsite = require('arsite') // ActiveRules config
     , lten = require('arlten') // ActiveRules localization (l10n)
     , auth = require('arauth') // ActiveRules authentication via Passport
-    , nugget = require('nugget');  // ActiveRules Nugget JSOn schema
+    //,  // ActiveRules Nugget JSOn schema
+    , _ = require('lodash')
+;
+
+var controllers = {
+    nugget: require('nugget')
+};
 
 // Create an app using the default Mach stack
 var app = mach.stack();
@@ -32,7 +39,7 @@ app.use(mach.logger);
  * Use ActiveRules Config.
  * This adds Site/Hostname based configuration.
  */
-app.use(arconfig, settings);
+app.use(arsite, settings);
 
 /**
  * Use ActiveRules Localization (L10N).
@@ -66,7 +73,7 @@ app.use(auth, settings);
 /**
  * Create routes from the API elements exposed through the Nugget module.
  */
-loadControllers(app);
+loadControllers(app, settings.routes);
 
 /**
  * Make it Active! Active Rules!
@@ -84,7 +91,20 @@ mach.serve(app);
  *
  * @param app
  */
-function loadControllers(app) {
+function loadControllers(app, routes) {
+
+     console.log(routes);
+
+    _.forOwn(routes, function(route) {
+
+            if(route.method === 'GET') {
+                app.get(route.path, function (conn) {
+                    return controllers[route.classfile][route.classmethod](conn)
+                });
+            }
+
+        } );
+
 
     /**
      * We always need a route for the root.
@@ -92,10 +112,10 @@ function loadControllers(app) {
      * The templates, javascript,css and localization for the homepage are configured per site.
      * This allows us to use one route for all sites and still provide different content.
      */
-    app.get('/', function (request) {
+  /*  app.get('/', function (conn) {
 
         // Send the
-        return nugget.root(request)
+        return nugget.root(conn)
     });
-
+*/
 }
