@@ -18,10 +18,10 @@
  */
 var mach = require('mach')
     , settings = require('./config/settings').settings
-    , arsite = require('arsite') // ActiveRules config
+    , arutil = require('arutil') // ActiveRules Site config
+    , arsite = require('arsite') // ActiveRules Site config
     , lten = require('arlten') // ActiveRules localization (l10n)
     , auth = require('arauth') // ActiveRules authentication via Passport
-    //,  // ActiveRules Nugget JSOn schema
     , _ = require('lodash')
 ;
 
@@ -34,6 +34,12 @@ var app = mach.stack();
 
 // Use the mach request logger @todo choose a full logger as well
 app.use(mach.logger);
+
+/**
+ * Use ActiveRules Config.
+ * This adds Site/Hostname based configuration.
+ */
+app.use(arutil, settings);
 
 /**
  * Use ActiveRules Config.
@@ -93,13 +99,13 @@ mach.serve(app);
  */
 function loadControllers(app, routes) {
 
-     console.log(routes);
+     //console.log(routes);
 
     _.forOwn(routes, function(route) {
 
             if(route.method === 'GET') {
                 app.get(route.path, function (conn) {
-                    return controllers[route.classfile][route.classmethod](conn)
+                    return controllers[route.arController][route.arMethod](conn)
                 });
             }
 
