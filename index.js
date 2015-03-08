@@ -18,8 +18,7 @@
  */
 var mach = require('mach')
     , settings = require('./config/settings').settings
-    , arutil = require('arutil') // ActiveRules Site config
-    , arsite = require('arsite') // ActiveRules Site config
+    , arsite = require('arsite') // ActiveRules Site configuration and magic
     , lten = require('arlten') // ActiveRules localization (l10n)
     , auth = require('arauth') // ActiveRules authentication via Passport
     , _ = require('lodash')
@@ -34,12 +33,6 @@ var app = mach.stack();
 
 // Use the mach request logger @todo choose a full logger as well
 app.use(mach.logger);
-
-/**
- * Use ActiveRules Config.
- * This adds Site/Hostname based configuration.
- */
-app.use(arutil, settings);
 
 /**
  * Use ActiveRules Config.
