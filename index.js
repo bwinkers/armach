@@ -20,7 +20,7 @@ var mach = require('mach')
     , settings = require('./config/settings').settings
     , arsite = require('arsite') // ActiveRules Site configuration and magic
     , lten = require('arlten') // ActiveRules localization (l10n)
-
+    , nugget = require('nugget')
     , _ = require('lodash')
 ;
 
@@ -92,6 +92,19 @@ mach.serve(app);
  * @param app
  */
 function loadRoutes(app, routes) {
+
+
+    var errObj = {
+        "message": "we have an error",
+        "devMessage": "they didn't use the password"
+    }
+
+    nugget.coreSchemaObject(errObj, '/schema/activerules/message.json')
+        .then(function(obj){
+            console.log(obj);
+        }
+
+    );
 
     // Loop through routes
     _.forOwn(routes, function(route) {
