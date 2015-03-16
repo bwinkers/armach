@@ -1,0 +1,16 @@
+{
+  "description": "Localized US English values for content required in core ActiveRules.",
+  "properties": {
+    "page": {
+      "home": {
+        "title": "Inicio"
+      },
+      "privacy": {
+        "title": "Privacidad"
+      },
+      "contact": {
+        "title": "Contáctenos"
+      }
+    }
+  }
+}

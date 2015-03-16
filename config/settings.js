@@ -16,16 +16,22 @@ exports.settings = {
     // Define the ActiveRules config root, default is a subdirectory relative to this file.
     configDir: path.join(__dirname, 'activerules'),
 
+    localization: {
+        defaultLocale: 'en-us'
+    },
+
     "routes": {
         "home": {
             "method": "GET",
             "path": "/",
+            "classMethod": "nugget.root",
             "arController": "nugget",
             "arMethod": 'root'
         },
         "test": {
             "method": "GET",
             "path": "/test",
+            "classMethod": "nugget.test",
             "arController": "nugget",
             "arMethod": 'test'
         }

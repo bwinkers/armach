@@ -13,15 +13,13 @@
       "casual": "ActiveRules",
       "abbrev": "AR"
     },
-    "localization": {
-      "locales": {
-        "en_US": [
-          "en-activerules",
-          "en-us"
-        ],
-        "es_US": ["en-es"]
-      },
-      "default": "en_US"
-    }
+    "localizations": {
+      "en_US": [
+        "en-activerules",
+        "en-us"
+      ],
+      "es_US": ["en-es"]
+    },
+    "default": "en_US"
   }
 }

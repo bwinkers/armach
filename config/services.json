@@ -1,0 +1,56 @@
+{
+  "$schema": "http://json-schema.org/draft-04/hyper-schema#",
+  "id": "http://www.activerules.com/coreServices.json",
+  "description": "ActiveRules core services. Provides homepage, privacy, contact us, etc.",
+  "properties": {
+
+  },
+  "definitions": {
+
+  },
+  "links": [
+    {
+      "description": "Homepage service",
+      "href": "/",
+      "method": "GET",
+      "rel": "root",
+      "title": "page.home.title",
+      "activeRules": {
+        "service": {
+          "controller": "arCore",
+          "method": "page",
+          "params": ["home"]
+        }
+      }
+    },
+    {
+      "description": "Privacy Policy",
+      "href": "/privacy",
+      "method": "GET",
+      "rel": "root",
+      "title": "page.privacy.title",
+      "activeRules": {
+        "service": {
+          "controller": "arCore",
+          "method": "page",
+          "params": ["privacy"]
+        }
+      }
+    },
+    {
+      "description": "Contact Information",
+      "href": "/contact",
+      "method": "GET",
+      "rel": "root",
+      "title": "page.contact.title",
+      "activeRules": {
+        "service": {
+          "controller": "arCore",
+          "method": "page",
+          "params": ["contact"]
+        }
+      }
+    }
+  ],
+  "type": "object"
+}
