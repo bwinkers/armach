@@ -21,6 +21,7 @@ var mach = require('mach')
     , arsite = require('arsite') // ActiveRules Site configuration and magic
     , lten = require('arlten') // ActiveRules localization (l10n)
     , nugget = require('nugget')
+    , router = require('arroute')
     , _ = require('lodash')
 ;
 
@@ -95,11 +96,12 @@ function loadRoutes(app, routes) {
 
 
     var errObj = {
-        "message": "we have an error",
-        "devMessage": "they didn't use the password"
+        "httpCode": 404,
+        "logMessage": "they didn't use the password",
+        "lten": "test"
     }
 
-    nugget.coreSchemaObject(errObj, '/schema/activerules/message.json')
+    nugget.coreSchemaObject(errObj, '/schema/activerules/errorMessage.json')
         .then(function(obj){
             console.log(obj);
         }
