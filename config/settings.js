@@ -20,23 +20,9 @@ exports.settings = {
         defaultLocale: 'en-us'
     },
 
-    "routes": {
-        "home": {
-            "method": "GET",
-            "path": "/",
-            "arController": "nugget",
-            "arMethod": 'root'
-        },
-        "test": {
-            "method": "GET",
-            "path": "/test",
-            "arController": "nugget",
-            "arMethod": 'test'
-        }
-    },
-
-    "controllers": {
+    "services": {
         "nugget": "nugget",
-        "auth": "arauth"
+        "auth": "arauth",
+        "homepage": "homepage"
     }
-}
+};

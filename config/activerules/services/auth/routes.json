@@ -1,0 +1,24 @@
+{
+  "description": "ActiveRules Authentication Services",
+  "auth": {
+    "description": "Authorization Services",
+    "method": "GET",
+    "path": "/auth",
+    "controller": "auth",
+    "action": "home"
+  },
+  "auth.login": {
+    "description": "Login",
+    "method": ["GET", "POST"],
+    "path": "/login",
+    "controller": "auth",
+    "action": "login"
+  },
+  "auth.logout": {
+    "description": "Logout",
+    "method": "GET",
+    "path": "/logout",
+    "controller": "auth",
+    "action": "logout"
+  }
+}

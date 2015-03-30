@@ -1,0 +1,10 @@
+{
+  "routes": {
+    "test": {
+      "method": "GET",
+      "path": "/test",
+      "controller": "nugget",
+      "action": "test"
+    }
+  }
+}

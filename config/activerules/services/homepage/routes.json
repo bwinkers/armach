@@ -1,0 +1,8 @@
+{
+  "homepage": {
+    "method": "GET",
+    "path": "/",
+    "controller": "nugget",
+    "action": "homepage"
+  }
+}

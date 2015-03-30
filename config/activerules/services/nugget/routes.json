@@ -1,0 +1,8 @@
+{
+  "nugget": {
+    "method": "GET",
+    "path": "/nugget",
+    "controller": "nugget",
+    "action": "nugget"
+  }
+}
