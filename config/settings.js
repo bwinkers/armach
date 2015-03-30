@@ -24,16 +24,19 @@ exports.settings = {
         "home": {
             "method": "GET",
             "path": "/",
-            "classMethod": "nugget.root",
             "arController": "nugget",
             "arMethod": 'root'
         },
         "test": {
             "method": "GET",
             "path": "/test",
-            "classMethod": "nugget.test",
             "arController": "nugget",
             "arMethod": 'test'
         }
+    },
+
+    "controllers": {
+        "nugget": "nugget",
+        "auth": "arauth"
     }
 }
