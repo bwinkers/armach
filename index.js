@@ -42,7 +42,7 @@ app.use(lten, settings);
 /**
  * Create routes from the API elements exposed through the Controllers configured in the settings.
  */
-router.loadRoutes(app, settings);
+router.loadServices(app, settings);
 
 /**
  * Make it Active! Active Rules!
